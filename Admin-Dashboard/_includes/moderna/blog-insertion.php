@@ -18,9 +18,10 @@ if(isset($_POST['image']) && $_SESSION['editID']) {
 
         if(!isset($_SESSION['editID'])) {
             if($imgtype == 'image/jpg' || $imgtype == 'image/png' || $imgtype == 'image/jpeg') {
-                $dir = '/opt/lampp/htdocs/Alumni/Admin-Dashboard/uploads/';
-                move_uploaded_file($imgtemp,$dir.$imgname);
+                $dir = "C:\xampp\htdocs\Alumni\Admin-Dashboard\uploads\\";
                 
+                move_uploaded_file($imgtemp,$dir.$imgname);
+                 
                 $insert = "INSERT INTO `blog`(`blog-img`, `blog-title`, `blog-description`,`blog`) VALUES ('$imgname','$title','$description','$blog')";
 
                 

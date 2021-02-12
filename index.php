@@ -39,8 +39,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <?php  include('includes/header.php')  ?>
-  <!-- End Header -->
+  <?php include('includes/header.php') ?>
 
   <main id="main">
 
@@ -66,38 +65,69 @@
         <div class="row">
 
           <div class="col-lg-8 entries">
-          <?php 
-            include('Admin-Dashboard/_includes/connection.php');
-
-            $query = "SELECT * FROM `blog` ORDER BY `blog-id` DESC";
-            $execute = mysqli_query($conn, $query);
-
-            while($data=mysqli_fetch_array($execute)) {
-
-          ?>
-
+          
             <article class="entry">
 
               <div class="entry-img">
-                <img src="Admin-Dashboard/uploads/<?php echo $data['blog-img'] ?>" alt="" class="img-fluid">
+                <img src="Admin-Dashboard/uploads/blog-post3.jpg" alt="" class="img-fluid">
               </div>
 
               <h2 class="entry-title">
-                <a href="blog-single.php?id=<?php echo $data['blog-id'] ?>"><?php echo $data['blog-title'] ?></a>
+                <a href="blog-single.php?id=10">Southeast University Organized a Discussion Session on Bangabandhu's Homecoming Day</a>
               </h2>
 
               <div class="entry-content">
                 <p>
-                  <?php echo $data['blog-description'] ?>
-                </p>
+                  Southeast University (SEU) organized an online discussion session on 14 January to celebrate the Father of the Nation Bangabandhu Sheikh Mujibur Rahman's Homecoming Day 2021.                </p>
                 <div class="read-more">
-                  <a href="blog-single.php?id=<?php echo $data['blog-id'] ?>">Read More</a>
+                  <a href="blog-single.php?id=10">Read More</a>
                 </div>
               </div>
 
             </article><!-- End blog entry -->
 
-<?php } ?>
+
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="Admin-Dashboard/uploads/blog-post2.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="blog-single.php?id=9">Prize Giving Ceremony of Inter-Department Quiz Competition on Bangabandhu Held</a>
+              </h2>
+
+              <div class="entry-content">
+                <p>
+                  Southeast University organized an “Inter-Department Quiz Competition on Bangabandhu” on 15 March 2020 at its own campus. The prize giving ceremony of this competition was held on 11 February 2021 at SEU Seminar Hall, Banani, Dhaka. The initiative was taken to mark the birth centenary of the Father of the Nation Bangabandhu Sheikh Mujibur Rahman.                </p>
+                <div class="read-more">
+                  <a href="blog-single.php?id=9">Read More</a>
+                </div>
+              </div>
+
+            </article><!-- End blog entry -->
+
+
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="Admin-Dashboard/uploads/su-2.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="blog-single.php?id=8">Southeast University</a>
+              </h2>
+
+              <div class="entry-content">
+                <p>
+                  Southeast University, SEU Alumni is an online social platform which is our running students, alumni, and honorable faculty lead initiative to share the opportunity information across the world...                </p>
+                <div class="read-more">
+                  <a href="blog-single.php?id=8">Read More</a>
+                </div>
+              </div>
+
+            </article><!-- End blog entry -->
+
           </div><!-- End blog entries list -->
 
           <div class="col-lg-4">
@@ -115,18 +145,22 @@
               <h3 class="sidebar-title">Recent Posts</h3>
               <div class="sidebar-item recent-posts">
 
-                <?php 
-                $execute = mysqli_query($conn,$query);
-                  while($data=mysqli_fetch_array($execute)) {
-                  
-                ?>
-                  <div class="post-item clearfix">
-                  <img src="Admin-Dashboard/uploads/<?php echo $data['blog-img'] ?>" alt="">
-                  <h4><a href="blog-single.php?id=<?php echo $data['blog-id'] ?>"><?php echo $data['blog-title'] ?></a></h4>
-                  <time datetime="2020-01-01"><?php echo $data['blog-time'] ?></time>
+                                  <div class="post-item clearfix">
+                  <img src="Admin-Dashboard/uploads/blog-post3.jpg" alt="">
+                  <h4><a href="blog-single.php?id=10">Southeast University Organized a Discussion Session on Bangabandhu's Homecoming Day</a></h4>
+                  <time datetime="2020-01-01">2021-02-12</time>
                 </div>
-                <?php   }  ?>
-              </div><!-- End sidebar recent posts-->
+                                  <div class="post-item clearfix">
+                  <img src="Admin-Dashboard/uploads/blog-post2.jpg" alt="">
+                  <h4><a href="blog-single.php?id=9">Prize Giving Ceremony of Inter-Department Quiz Competition on Bangabandhu Held</a></h4>
+                  <time datetime="2020-01-01">2021-02-12</time>
+                </div>
+                                  <div class="post-item clearfix">
+                  <img src="Admin-Dashboard/uploads/su-2.jpg" alt="">
+                  <h4><a href="blog-single.php?id=8">Southeast University</a></h4>
+                  <time datetime="2020-01-01">2021-02-12</time>
+                </div>
+                              </div><!-- End sidebar recent posts-->
 
               <h3 class="sidebar-title">Tags</h3>
               <div class="sidebar-item tags">
@@ -159,8 +193,13 @@
 
   </main><!-- End #main -->
 
-<?php  include('includes/footer.php') ?>
- 
+<footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span></span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer> 
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
@@ -180,5 +219,7 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+
+
 
 </html>
