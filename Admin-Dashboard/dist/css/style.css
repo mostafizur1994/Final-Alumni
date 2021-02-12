@@ -1,0 +1,13 @@
+.buttons {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons a {
+    width: 40%;
+    margin: 2rem;
+    height:60%;
+    font-size: 5rem;
+    text-align: center
+}
